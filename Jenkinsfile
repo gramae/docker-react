@@ -2,7 +2,7 @@ node {
    def app
    stage('Build Docker Image') {
        checkout scm
-       app = docker.build("gramae/docker-react Dockerfile.dev .")
+       app = docker.build("gramae/docker-react -f Dockerfile.dev .")
    }
 
    stage('Docker Run') {
