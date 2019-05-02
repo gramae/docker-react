@@ -15,9 +15,14 @@ pipeline {
     agent {
         dockerfile true
     }
-    stages('Build'){
-        steps {
-             sh 'npm --version'
+    stages{
+        stage ('Build the image') {
+          steps {
+             echo 'Starting to build the image'
+             script{
+                 def jenkinsImage = docker.build("gramae/docker-react -f Dockerfile.dev .")
+             }
         }
     }
+  }
 }
