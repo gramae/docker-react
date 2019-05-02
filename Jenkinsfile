@@ -15,7 +15,7 @@ pipeline {
     agent {
         dockerfile true
     }
-    stage('Build'){
+    stages('Build'){
         steps {
              sh 'npm --version'
         }
