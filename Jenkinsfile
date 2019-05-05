@@ -13,8 +13,9 @@
 
 pipeline {
     agent {
-        dockerfile true
+        
           docker{
+              dockerfile true
               args '-u root:sudo -v /usr/share/jenkins'
           }
     }
