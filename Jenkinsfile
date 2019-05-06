@@ -13,9 +13,10 @@
 
 pipeline {
     agent {
-        dockerfile {
-              args '-u root:sudo -v /usr/share/jenkins'
-          }
+         dockerfile true  
+        //{
+        //       args '-u root:sudo -v /usr/share/jenkins'
+        //   }
     }
     stages{
         stage ('Build the image') {
