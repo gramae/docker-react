@@ -26,12 +26,16 @@ pipeline {
                  def jenkinsImage = docker.build("gramae/docker-react -f Dockerfile.dev .")
              }
         }
-        steps {
-             echo 'Running the image'
+        
+    }
+      stage ('Run the image') {
+          steps {
+             echo 'Runining the image'
              script{
                  def jenkinsImage = docker.run("gramae/docker-react -f Dockerfile.dev .")
              }
         }
+        
     }
   }
 }
