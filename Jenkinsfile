@@ -13,7 +13,7 @@
 
 pipeline {
     agent {
-         dockerfile //true  
+          docker true //dockerfile  
         {
                args '-u root:sudo -v /var/lib/jenkins/workspace/pipeline_react'
            }
